@@ -54,16 +54,15 @@ submitBtn.onclick = () => {
   isConfirmPassOk = false;
 
   // validate first name
-  if (firstNameInput.value !== "คมเนตร") {
+  if (firstNameInput.value < 0) {
     firstNameInput.classList.add("is-invalid");
   } else {
-    firstNameInput.classList.remove("is-invalid");
     firstNameInput.classList.add("is-valid");
     isFirstNameOk = true;
   }
 
   // validate last name
-  if (lastNameInput.value !== "นามพรม") {
+  if (lastNameInput.value.length < 0) {
     lastNameInput.classList.add("is-invalid");
   } else {
     lastNameInput.classList.add("is-valid");
